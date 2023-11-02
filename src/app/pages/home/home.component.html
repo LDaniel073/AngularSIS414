@@ -39,8 +39,8 @@ let tel3 = "0800 1111";
 let correo1 = "Curabitur.egestas.nunc@nonummyac.co.uk";
 let correo2 = "posuere.vulputate@sed.com";
 let correo3 = "libero@convallis.edu";
-console.log(`${nom1} / ${tel1} / ${correo1}`);
-console.log(`${nom3} / ${tel3} / ${correo3}`);
+console.log(`${{nom1} / ${{tel1} / ${{correo1}`);
+console.log(`${{nom3} / ${{tel3} / ${{correo3}`);
                 </pre>
             </div>
         </div>
@@ -75,26 +75,26 @@ console.log(`${nom3} / ${tel3} / ${correo3}`);
             <div class="respuesta">
                 <pre>
 let contacts = [
-{
+{{
 name: "Maxwell Wright",
 phone: "(0191) 719 6495",
 email: "Curabitur.egestas.nunc@nonummyac.co.uk"
-}, {
+}, {{
 name: "Raja Villarreal",
 phone: "0866 398 2895",
 email: "posuere.vulputate@sed.com"
-}, {
+}, {{
 name: "Helen Richards",
 phone: "0800 1111",
 email: "libero@convallis.edu"
-}, {
+}, {{
 name: "Maisie Haley",
 phone: "0913 531 3030",
 email: "risus.Quisque@urna.ca"
 }
 ];
-console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
-console.log(`${contacts[(contacts.length)-1].name} / ${contacts[(contacts.length)-1].phone} / ${contacts[(contacts.length)-1].email}`);
+console.log(`${{contacts[0].name} / ${{contacts[0].phone} / ${{contacts[0].email}`);
+console.log(`${{contacts[(contacts.length)-1].name} / ${{contacts[(contacts.length)-1].phone} / ${{contacts[(contacts.length)-1].email}`);
                 </pre>
             </div>
         </div>
@@ -119,22 +119,22 @@ console.log(`${contacts[(contacts.length)-1].name} / ${contacts[(contacts.length
             <div class="respuesta">
                 <pre>
 let contacts = [
-{
+{{
 name: "Maxwell Wright",
 phone: "(0191) 719 6495",
 email: "Curabitur.egestas.nunc@nonummyac.co.uk"
-}, {
+}, {{
 name: "Raja Villarreal",
 phone: "0866 398 2895",
 email: "posuere.vulputate@sed.com"
-}, {
+}, {{
 name: "Helen Richards",
 phone: "0800 1111",
 email: "libero@convallis.edu"
 }
 ];
 
-let NewContact = {
+let NewContact = {{
     name: window.prompt("Digite su Nombre: "),
     phone: window.prompt("Digite su Numero de Telefono: "),
     email: window.prompt("Digite su Correo Electronico: ")
@@ -144,8 +144,8 @@ contacts.push(NewContact);
                         
 let last = contacts.length - 1;
                         
-console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
-console.log(`${contacts[last.name} / ${contacts[last].phone} / ${contacts[last].email}`);
+console.log(`${{contacts[0].name} / ${{contacts[0].phone} / ${{contacts[0].email}`);
+console.log(`${{contacts[last.name} / ${{contacts[last].phone} / ${{contacts[last].email}`);
                 </pre>
             </div>
         </div>
@@ -175,15 +175,15 @@ console.log(`${contacts[last.name} / ${contacts[last].phone} / ${contacts[last].
             <div class="respuesta">
                 <pre>
 let contacts = [
-{
+{{
 name: "Maxwell Wright",
 phone: "(0191) 719 6495",
 email: "Curabitur.egestas.nunc@nonummyac.co.uk"
-}, {
+}, {{
 name: "Raja Villarreal",
 phone: "0866 398 2895",
 email: "posuere.vulputate@sed.com"
-}, {
+}, {{
 name: "Helen Richards",
 phone: "0800 1111",
 email: "libero@convallis.edu"
@@ -191,22 +191,22 @@ email: "libero@convallis.edu"
 ];
 
 let op = window.prompt("1. Mostar el primer contacto \n2. Mostar el ultimo contacto \n3. Agregar un nuevo contaco","elije una opcion:");
-switch(op) {
+switch(op) {{
 case "1":
-    console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
+    console.log(`${{contacts[0].name} / ${{contacts[0].phone} / ${{contacts[0].email}`);
 break;
 case "2":
-    console.log(`${contacts[(contacts.length)-1].name} / ${contacts[(contacts.length)-1].phone} / ${contacts[(contacts.length)-1].email}`);
+    console.log(`${{contacts[(contacts.length)-1].name} / ${{contacts[(contacts.length)-1].phone} / ${{contacts[(contacts.length)-1].email}`);
 break;
 case '3':
-    let NewContact = {
+    let NewContact = {{
         name: window.prompt("Digite su Nombre: "),
         phone: window.prompt("Digite su Numero de Telefono: "),
         email: window.prompt("Digite su Correo Electronico: ")
     }
-    if (NewContact.name == "" || NewContact.phone == "" || NewContact.email == "") {
+    if (NewContact.name == "" || NewContact.phone == "" || NewContact.email == "") {{
         alert("No se agrego por un dato vacio")
-    } else {
+    } else {{
         alert("Se agrego con exito!");
         contacts.push(NewContact);
     }
@@ -245,15 +245,15 @@ default:
             <div class="respuesta">
                 <pre>
 let contacts = [
-{
+{{
 name: "Maxwell Wright",
 phone: "(0191) 719 6495",
 email: "Curabitur.egestas.nunc@nonummyac.co.uk"
-}, {
+}, {{
 name: "Raja Villarreal",
 phone: "0866 398 2895",
 email: "posuere.vulputate@sed.com"
-}, {
+}, {{
 name: "Helen Richards",
 phone: "0800 1111",
 email: "libero@convallis.edu"
@@ -261,29 +261,29 @@ email: "libero@convallis.edu"
 ];
 
 let op;
-do {
+do {{
 op = window.prompt("1. Mostar el primer contacto \n2. Mostar el ultimo contacto \n3. Mostrar todos los contactos  \n4. Agragar un nuevo contacto \n5. Salir del programa","elije una opcion:");
-switch(op){
+switch(op){{
     case "1":
-        console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
+        console.log(`${{contacts[0].name} / ${{contacts[0].phone} / ${{contacts[0].email}`);
     break;
     case "2":
-        console.log(`${contacts[(contacts.length)-1].name} / ${contacts[(contacts.length)-1].phone} / ${contacts[(contacts.length)-1].email}`);
+        console.log(`${{contacts[(contacts.length)-1].name} / ${{contacts[(contacts.length)-1].phone} / ${{contacts[(contacts.length)-1].email}`);
     break;
     case "3":
-        for (let i = 0; i < contacts.length; i++) {
-            console.log(`${contacts[i].name} / ${contacts[i].phone} / ${contacts[i].email}`);        
+        for (let i = 0; i < contacts.length; i++) {{
+            console.log(`${{contacts[i].name} / ${{contacts[i].phone} / ${{contacts[i].email}`);        
         }
     break;
     case "4":
-        let NewContact = {
+        let NewContact = {{
             name: window.prompt("Digite su Nombre: "),
             phone: window.prompt("Digite su Numero de Telefono: "),
             email: window.prompt("Digite su Correo Electronico: ")
         }
-        if (NewContact.name == "" || NewContact.phone == "" || NewContact.email == "") {
+        if (NewContact.name == "" || NewContact.phone == "" || NewContact.email == "") {{
             alert("No se agrego por un dato vacio");
-        } else {
+        } else {{
             contacts.push(NewContact);
             alert("Se agrego con exito!");
         }
@@ -329,15 +329,15 @@ switch(op){
             <div class="respuesta">
                 <pre>
 let contacts = [
-{
+{{
 name: "Maxwell Wright",
 phone: "(0191) 719 6495",
 email: "Curabitur.egestas.nunc@nonummyac.co.uk"
-}, {
+}, {{
 name: "Raja Villarreal",
 phone: "0866 398 2895",
 email: "posuere.vulputate@sed.com"
-}, {
+}, {{
 name: "Helen Richards",
 phone: "0800 1111",
 email: "libero@convallis.edu"
@@ -345,9 +345,9 @@ email: "libero@convallis.edu"
 ];
 
 let op;
-do {
+do {{
 op = window.prompt("1. Mostar el primer contacto \n2. Mostar el ultimo contacto \n3. Mostrar todos los contactos  \n4. Agragar un nuevo contacto \n5. Salir del programa","elije una opcion:");
-switch(op){
+switch(op){{
     case "1":
         showContact(contacts,0);
     break;
@@ -371,23 +371,23 @@ switch(op){
 }
 } while(op != 5);
 
-function showContact(lisCont, numInd) {
-if (lisCont instanceof Array && lisCont[numInd]) {
-    console.log(`${lisCont[numInd].name} / ${lisCont[numInd].phone} / ${lisCont[numInd].email}`);
+function showContact(lisCont, numInd) {{
+if (lisCont instanceof Array && lisCont[numInd]) {{
+    console.log(`${{lisCont[numInd].name} / ${{lisCont[numInd].phone} / ${{lisCont[numInd].email}`);
 }
 }
 
-function showAllContacts(lisCont) {
-if (lisCont instanceof Array) {
-    for (let i = 0; i < lisCont.length; i++) {
-        console.log(`${lisCont[i].name} / ${lisCont[i].phone} / ${lisCont[i].email}`);        
+function showAllContacts(lisCont) {{
+if (lisCont instanceof Array) {{
+    for (let i = 0; i < lisCont.length; i++) {{
+        console.log(`${{lisCont[i].name} / ${{lisCont[i].phone} / ${{lisCont[i].email}`);        
     }
 }
 }
 
-function addNewContacts(lisCont, nom, cell, corrElec ) {
-if (contacts instanceof Array && nom && cell && corrElec) {
-    lisCont.push({
+function addNewContacts(lisCont, nom, cell, corrElec ) {{
+if (contacts instanceof Array && nom && cell && corrElec) {{
+    lisCont.push({{
         name: nom,
         phone: cell,
         email: corrElec
@@ -415,11 +415,11 @@ if (contacts instanceof Array && nom && cell && corrElec) {
                 <pre>let numbers = [10, 50, 40, 20];</pre>
                 <p>se puede ordenar en orden ascendente con una llamada:</p>
                 <pre>
-numbers.sort(function (a, b) {
+numbers.sort(function (a, b) {{
 let retVal = 0;
-if (a > b) {
+if (a > b) {{
     retVal = 1;
-} else {
+} else {{
     retVal = -1;
 }
 return retVal;
@@ -433,15 +433,15 @@ return retVal;
             <div class="respuesta">
                 <pre>
 let contacts = [
-{
+{{
 name: "Maxwell Wright",
 phone: "(0191) 719 6495",
 email: "Curabitur.egestas.nunc@nonummyac.co.uk"
-}, {
+}, {{
 name: "Raja Villarreal",
 phone: "0866 398 2895",
 email: "posuere.vulputate@sed.com"
-}, {
+}, {{
 name: "Helen Richards",
 phone: "0800 1111",
 email: "libero@convallis.edu"
@@ -449,9 +449,9 @@ email: "libero@convallis.edu"
 ];
 
 let op;
-do {
+do {{
 op = window.prompt("1. Mostar el primer contacto \n2. Mostar el ultimo contacto \n3. Mostrar todos los contactos  \n4. Agragar un nuevo contacto \n5. Clasificacion \n6. Salir del programa","elije una opcion:");
-switch(op){
+switch(op){{
     case "1":
         showContact(contacts,0);
     break;
@@ -479,23 +479,23 @@ switch(op){
 }
 } while(op != 6);
 
-function showContact(lisCont, numInd) {
-if (lisCont instanceof Array && lisCont[numInd]) {
-    console.log(`${lisCont[numInd].name} / ${lisCont[numInd].phone} / ${lisCont[numInd].email}`);
+function showContact(lisCont, numInd) {{
+if (lisCont instanceof Array && lisCont[numInd]) {{
+    console.log(`${{lisCont[numInd].name} / ${{lisCont[numInd].phone} / ${{lisCont[numInd].email}`);
 }
 }
 
-function showAllContacts(lisCont) {
-if (lisCont instanceof Array) {
-    for (let i = 0; i < lisCont.length; i++) {
-        console.log(`${lisCont[i].name} / ${lisCont[i].phone} / ${lisCont[i].email}`);        
+function showAllContacts(lisCont) {{
+if (lisCont instanceof Array) {{
+    for (let i = 0; i < lisCont.length; i++) {{
+        console.log(`${{lisCont[i].name} / ${{lisCont[i].phone} / ${{lisCont[i].email}`);        
     }
 }
 }
 
-function addNewContacts(lisCont, nom, cell, corrElec ) {
-if (contacts instanceof Array && nom && cell && corrElec) {
-    lisCont.push({
+function addNewContacts(lisCont, nom, cell, corrElec ) {{
+if (contacts instanceof Array && nom && cell && corrElec) {{
+    lisCont.push({{
         name: nom,
         phone: cell,
         email: corrElec
@@ -504,9 +504,9 @@ if (contacts instanceof Array && nom && cell && corrElec) {
 }
 }
 
-function sortContacts(contacts, orde) {
-if (contacts instanceof Array) {
-    switch (orde) {
+function sortContacts(contacts, orde) {{
+if (contacts instanceof Array) {{
+    switch (orde) {{
         case "1":
             contacts.sort((a, b) => a.name.localeCompare(b.name));
         break;
@@ -521,8 +521,8 @@ if (contacts instanceof Array) {
         return;
     }
     console.log("Lista ordenada:");
-    for (const contact of contacts) {
-        console.log(`${contact.name} / ${contact.phone} / ${contact.email}`);
+    for (const contact of contacts) {{
+        console.log(`${{contact.name} / ${{contact.phone} / ${{contact.email}`);
     }
 }
 }
