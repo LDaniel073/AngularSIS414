@@ -1,0 +1,538 @@
+<div class="cab">
+    <h1>LUIS DANIEL ACUÑA OYOLA</h1>
+    <h3>Primer Parcial</h3>
+</div>
+<div class="nav">
+    <a href="#lab1">Laboratorio 1</a>
+    <a href="#lab2">Laboratorio 2</a>
+    <a href="#lab3">Laboratorio 3</a>
+    <a href="#lab4">Laboratorio 4</a>
+    <a href="#lab5">Laboratorio 5</a>
+    <a href="#lab6">Laboratorio 6</a>
+    <a href="#lab7">Laboratorio 7</a>
+</div>
+<div class="cont">
+    <div class="cuerpo">
+        <br>
+        <div class="labs" id="lab1">
+            <div class="titulo">
+                <h2>LABORATORIO #1</h2>
+            </div>
+            <div class="enunciado">
+                <p>Nuestra tarea será crear una lista de contactos. Inicialmente, 
+                la lista será bastante simple: solo escribiremos a tres personas 
+                usando los datos que se muestran en la siguiente tabla. En el resto 
+                del curso, volverá a este script y lo ampliará sistemáticamente con 
+                nuevas funciones, utilizando los elementos recién aprendidos de JavaScript.
+                Declara e inicializa las variables donde almacenarás toda la información (nueve 
+                variables en total). Muestra en la consola información sobre el primer y último 
+                contacto en el formulario: nombre/teléfono/correo electrónico</p>
+            </div>
+            <div class="respuesta">
+                <pre>
+let nom1 = "Maxwell Wright";
+let nom2 = "Rajá Villarreal";
+let nom3 = "Helen Richards";
+let tel1 = "(0191) 719 6495";
+let tel2 = "0866 398 2895";
+let tel3 = "0800 1111";
+let correo1 = "Curabitur.egestas.nunc@nonummyac.co.uk";
+let correo2 = "posuere.vulputate@sed.com";
+let correo3 = "libero@convallis.edu";
+console.log(`${nom1} / ${tel1} / ${correo1}`);
+console.log(`${nom3} / ${tel3} / ${correo3}`);
+                </pre>
+            </div>
+        </div>
+        <br>
+        <div class="labs" id="lab2">
+            <div class="titulo">
+                <h2>LABORATORIO #2</h2>
+            </div>
+            <div class="enunciado">
+                <p>¿Recuerdas la lista de contactos que creaste mientras realizabas la tarea del 
+                    laboratorio anterior? Hay que admitir que a primera vista parecía bastante 
+                    extraño. Tuvimos que utilizar nueve variables para almacenar información sobre 
+                    sólo tres usuarios. Lo que es peor, agregar cada nuevo usuario requeriría la 
+                    creación de tres variables más. Esto no es ni conveniente ni práctico. 
+                    Afortunadamente, desde entonces hemos aprendido algo sobre matrices y 
+                    objetos, lo que nos permitirá guardar nuestra lista de una forma un poco 
+                    más cómoda. Usando los mismos datos que en la práctica anterior, cree la 
+                    lista de contactos como una matriz, cada elemento del cual será un objeto 
+                    que describirá a un solo usuario. Entonces deberíamos obtener una matriz de 
+                    tres elementos, y cada objeto colocado en ella contendrá tres datos (nombre, 
+                    teléfono y correo electrónico).
+
+                    Al final de la lista declarada de esta manera, agregue un nuevo contacto 
+                    usando el método de matriz apropiado. El nuevo contacto es:
+                    Maisie Haley / 0913 531 3030 / risus.Quisque@urna.ca .
+                    
+                    Muestra el primer y último contacto, nuevamente en el formato: 
+                    nombre/teléfono/correo electrónico . Utilizar ellongitudPropiedad 
+                    de la matriz para determinar el índice del último elemento. Recuerde 
+                    que los elementos de la matriz se indexan a partir de 0.</p>
+            </div>
+            <div class="respuesta">
+                <pre>
+let contacts = [
+{
+name: "Maxwell Wright",
+phone: "(0191) 719 6495",
+email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+}, {
+name: "Raja Villarreal",
+phone: "0866 398 2895",
+email: "posuere.vulputate@sed.com"
+}, {
+name: "Helen Richards",
+phone: "0800 1111",
+email: "libero@convallis.edu"
+}, {
+name: "Maisie Haley",
+phone: "0913 531 3030",
+email: "risus.Quisque@urna.ca"
+}
+];
+console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
+console.log(`${contacts[(contacts.length)-1].name} / ${contacts[(contacts.length)-1].phone} / ${contacts[(contacts.length)-1].email}`);
+                </pre>
+            </div>
+        </div>
+        <br>
+        <div class="labs" id="lab3">
+            <div class="titulo">
+                <h2>LABORATORIO #3</h2>
+            </div>
+            <div class="enunciado">
+                <p>Volvamos a nuestra lista de contactos. Después de algunos ajustes 
+                    recientes (es decir, usar una matriz y objetos), en realidad está
+                    empezando a parecerse a una lista. Sin embargo, persistía un problema
+                    bastante grave. Los cambios de datos en la lista, como agregar un
+                    nuevo contacto, deben especificarse de inmediato en el código del programa. 
+                    ¿Qué pasa si queremos darle al usuario la posibilidad de ingresar los datos 
+                    del contacto agregado mientras el programa se está ejecutando? Modifique el 
+                    programa para agregar, al final de la lista, no el contacto que se proporciona 
+                    en el código, sino el que el usuario proporcionará durante la ejecución del 
+                    programa. Utilizar elinmediatométodo para hacer esto. Al final, muestra el primer 
+                    y último contacto de la lista.</p>
+            </div>
+            <div class="respuesta">
+                <pre>
+let contacts = [
+{
+name: "Maxwell Wright",
+phone: "(0191) 719 6495",
+email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+}, {
+name: "Raja Villarreal",
+phone: "0866 398 2895",
+email: "posuere.vulputate@sed.com"
+}, {
+name: "Helen Richards",
+phone: "0800 1111",
+email: "libero@convallis.edu"
+}
+];
+
+let NewContact = {
+    name: window.prompt("Digite su Nombre: "),
+    phone: window.prompt("Digite su Numero de Telefono: "),
+    email: window.prompt("Digite su Correo Electronico: ")
+}     
+
+contacts.push(NewContact);
+                        
+let last = contacts.length - 1;
+                        
+console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
+console.log(`${contacts[last.name} / ${contacts[last].phone} / ${contacts[last].email}`);
+                </pre>
+            </div>
+        </div>
+        <br>
+        <div class="labs" id="lab4">
+            <div class="titulo">
+                <h2>LABORATORIO #4</h2>
+            </div>
+            <div class="enunciado">
+                <p>Durante la última modificación del programa con la lista de contactos, 
+                    permitimos al usuario agregar un nuevo contacto con los datos ingresados 
+                    por el usuario mientras se ejecuta el programa. Vayamos un paso más allá: 
+                    intentemos modificar el programa para que el usuario pueda elegir qué quiere 
+                    hacer con la lista. Tendrán la opción de:
+                </p>
+                <ul>
+                    <li>mostrando el primer contacto (primero)</li>
+                    <li>mostrando el último contacto (último)</li>
+                    <li>agregando un nuevo contacto (nuevo)</li>
+                </ul>
+                <p>
+                    Al agregar un nuevo contacto, verifique si el usuario ha ingresado 
+                    todos los datos necesarios. Si falta al menos uno de los tres valores 
+                    (nombre, teléfono o correo electrónico), no agregue el contacto.
+                </p>
+            </div>
+            <div class="respuesta">
+                <pre>
+let contacts = [
+{
+name: "Maxwell Wright",
+phone: "(0191) 719 6495",
+email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+}, {
+name: "Raja Villarreal",
+phone: "0866 398 2895",
+email: "posuere.vulputate@sed.com"
+}, {
+name: "Helen Richards",
+phone: "0800 1111",
+email: "libero@convallis.edu"
+}
+];
+
+let op = window.prompt("1. Mostar el primer contacto \n2. Mostar el ultimo contacto \n3. Agregar un nuevo contaco","elije una opcion:");
+switch(op) {
+case "1":
+    console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
+break;
+case "2":
+    console.log(`${contacts[(contacts.length)-1].name} / ${contacts[(contacts.length)-1].phone} / ${contacts[(contacts.length)-1].email}`);
+break;
+case '3':
+    let NewContact = {
+        name: window.prompt("Digite su Nombre: "),
+        phone: window.prompt("Digite su Numero de Telefono: "),
+        email: window.prompt("Digite su Correo Electronico: ")
+    }
+    if (NewContact.name == "" || NewContact.phone == "" || NewContact.email == "") {
+        alert("No se agrego por un dato vacio")
+    } else {
+        alert("Se agrego con exito!");
+        contacts.push(NewContact);
+    }
+break;
+default:
+    alert("No existe esa opcion");
+}
+                </pre>
+            </div>
+        </div>
+        <br>
+        <div class="labs" id="lab5">
+            <div class="titulo">
+                <h2>LABORATORIO #5</h2>
+            </div>
+            <div class="enunciado">
+                <p>Podemos mejorar un poco nuestro programa de lista de contactos usando 
+                    bucles. Ahora puede intentar mostrar no sólo el primer o el último 
+                    contacto, sino todos los contactos de la lista, independientemente de su número.
+
+                    Además, intente encerrar todo el programa en un bucle para que al usuario 
+                    se le pregunte repetidamente qué quiere hacer. El usuario puede elegir:
+                </p>
+                <ul>
+                    <li>el primer contacto (primero)</li>
+                    <li>mostrar el último contacto (último)</li>
+                    <li>mostrar todos los contactos (todos)</li>
+                    <li>agregar un nuevo contacto (nuevo)</li>
+                    <li>salir del programa (salir)</li>
+                </ul>
+                <p>Luego de ejecutar la acción seleccionada, el programa le dará la oportunidad 
+                    de elegir nuevamente. El programa debe finalizar las acciones solo después de 
+                    que el usuario dé un comando específico, por ejemploabandonar.
+                </p>
+            </div>
+            <div class="respuesta">
+                <pre>
+let contacts = [
+{
+name: "Maxwell Wright",
+phone: "(0191) 719 6495",
+email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+}, {
+name: "Raja Villarreal",
+phone: "0866 398 2895",
+email: "posuere.vulputate@sed.com"
+}, {
+name: "Helen Richards",
+phone: "0800 1111",
+email: "libero@convallis.edu"
+}
+];
+
+let op;
+do {
+op = window.prompt("1. Mostar el primer contacto \n2. Mostar el ultimo contacto \n3. Mostrar todos los contactos  \n4. Agragar un nuevo contacto \n5. Salir del programa","elije una opcion:");
+switch(op){
+    case "1":
+        console.log(`${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
+    break;
+    case "2":
+        console.log(`${contacts[(contacts.length)-1].name} / ${contacts[(contacts.length)-1].phone} / ${contacts[(contacts.length)-1].email}`);
+    break;
+    case "3":
+        for (let i = 0; i < contacts.length; i++) {
+            console.log(`${contacts[i].name} / ${contacts[i].phone} / ${contacts[i].email}`);        
+        }
+    break;
+    case "4":
+        let NewContact = {
+            name: window.prompt("Digite su Nombre: "),
+            phone: window.prompt("Digite su Numero de Telefono: "),
+            email: window.prompt("Digite su Correo Electronico: ")
+        }
+        if (NewContact.name == "" || NewContact.phone == "" || NewContact.email == "") {
+            alert("No se agrego por un dato vacio");
+        } else {
+            contacts.push(NewContact);
+            alert("Se agrego con exito!");
+        }
+    break;
+    case "5":
+        alert("Chausito ^^");
+    break;
+    default:
+        alert("No existe esa opcion")
+}
+} while(op != 5);
+                </pre>
+            </div>
+        </div>
+        <br>
+        <div class="labs" id="lab6">
+            <div class="titulo">
+                <h2>LABORATORIO #6</h2>
+            </div>
+            <div class="enunciado">
+                <p>Nuestro programa ha crecido bastante, lo que hace que sea un poco difícil 
+                    de leer. Es especialmente visible en la instrucción de cambio, donde se 
+                    incluye la mayor parte de la lógica. Intente organizar el código de su 
+                    programa mediante el uso de funciones. Defina y llame a tres funciones en 
+                    los lugares apropiados:
+                </p>
+                <ul>
+                    <li>mostrarContacto: la función debe tomar dos argumentos; el primero es 
+                        la lista de contactos y el segundo es el número de índice del contacto a 
+                        mostrar; dentro de la función, verifique si se pasan los argumentos 
+                        correctos, es decir, si los contactos son una matriz (use 
+                        elinstanciadeArrayconstrucción para esto);</li>
+                    <li>Mostrar todos los contactos: la función debe tomar un argumento, 
+                        la lista de contactos; dentro de la función, verifique si el 
+                        argumento dado es una matriz;</li>
+                    <li>añadir nuevo contacto: la función debe tomar cuatro argumentos, 
+                        una lista de contactos y los datos del nuevo contacto, es decir: 
+                        nombre, teléfono y número; Antes de agregar un nuevo contacto, 
+                        verifique si el argumento pasado es una matriz y si los datos 
+                        del nuevo contacto tienen algún valor.</li>
+                </ul>
+            </div>
+            <div class="respuesta">
+                <pre>
+let contacts = [
+{
+name: "Maxwell Wright",
+phone: "(0191) 719 6495",
+email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+}, {
+name: "Raja Villarreal",
+phone: "0866 398 2895",
+email: "posuere.vulputate@sed.com"
+}, {
+name: "Helen Richards",
+phone: "0800 1111",
+email: "libero@convallis.edu"
+}
+];
+
+let op;
+do {
+op = window.prompt("1. Mostar el primer contacto \n2. Mostar el ultimo contacto \n3. Mostrar todos los contactos  \n4. Agragar un nuevo contacto \n5. Salir del programa","elije una opcion:");
+switch(op){
+    case "1":
+        showContact(contacts,0);
+    break;
+    case "2":
+        showContact(contacts,(contacts.length)-1);
+    break;
+    case "3":
+        showAllContacts(contacts);
+    break;
+    case "4":
+        let nam = window.prompt("Digite su Nombre: ");
+        let phone = window.prompt("Digite su Numero de Telefono: ");
+        let email = window.prompt("Digite su Correo Electronico: ");
+        addNewContacts(contacts,nam, phone,email);
+    break;
+    case "5":
+        alert("Chausito ^^");
+    break;
+    default:
+        alert("No existe esa opcion")
+}
+} while(op != 5);
+
+function showContact(lisCont, numInd) {
+if (lisCont instanceof Array && lisCont[numInd]) {
+    console.log(`${lisCont[numInd].name} / ${lisCont[numInd].phone} / ${lisCont[numInd].email}`);
+}
+}
+
+function showAllContacts(lisCont) {
+if (lisCont instanceof Array) {
+    for (let i = 0; i < lisCont.length; i++) {
+        console.log(`${lisCont[i].name} / ${lisCont[i].phone} / ${lisCont[i].email}`);        
+    }
+}
+}
+
+function addNewContacts(lisCont, nom, cell, corrElec ) {
+if (contacts instanceof Array && nom && cell && corrElec) {
+    lisCont.push({
+        name: nom,
+        phone: cell,
+        email: corrElec
+    });
+    alert("Se agrego con exito!");
+}
+}
+                </pre>
+            </div>
+        </div>
+        <br>
+        <div class="labs" id="lab7">
+            <div class="titulo">
+                <h2>LABORATORIO #7</h2>
+            </div>
+            <div class="enunciado">
+                <p>Usaremos las funciones para agregar un elemento más de funcionalidad. 
+                    Las matrices tienen unclasificarmétodo que nos permite ordenar sus 
+                    elementos. A este método, le pasamos una función que debe comparar 
+                    dos elementos de la matriz y decidir cuál es más pequeño y cuál es 
+                    más grande. Si el primer elemento es menor, la función devuelve un 
+                    valor menor que cero, si son iguales devuelve cero, y si el primero 
+                    es mayor, devuelve un valor mayor que cero. Por ejemplo, la matriz:
+                </p>
+                <pre>let numbers = [10, 50, 40, 20];</pre>
+                <p>se puede ordenar en orden ascendente con una llamada:</p>
+                <pre>
+numbers.sort(function (a, b) {
+let retVal = 0;
+if (a > b) {
+    retVal = 1;
+} else {
+    retVal = -1;
+}
+return retVal;
+});</pre>
+                <p>o más simplemente:</p>
+                <pre>numbers.sort((a, b) => a - b);</pre>
+                <p>Darle al usuario la opción de seleccionar unclasificaracción de la lista. 
+                    Cuando se selecciona esta opción, el usuario debería poder especificar si 
+                    desea ordenar los contactos por nombre, teléfono o correo electrónico.</p>
+            </div>
+            <div class="respuesta">
+                <pre>
+let contacts = [
+{
+name: "Maxwell Wright",
+phone: "(0191) 719 6495",
+email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+}, {
+name: "Raja Villarreal",
+phone: "0866 398 2895",
+email: "posuere.vulputate@sed.com"
+}, {
+name: "Helen Richards",
+phone: "0800 1111",
+email: "libero@convallis.edu"
+}
+];
+
+let op;
+do {
+op = window.prompt("1. Mostar el primer contacto \n2. Mostar el ultimo contacto \n3. Mostrar todos los contactos  \n4. Agragar un nuevo contacto \n5. Clasificacion \n6. Salir del programa","elije una opcion:");
+switch(op){
+    case "1":
+        showContact(contacts,0);
+    break;
+    case "2":
+        showContact(contacts,(contacts.length)-1);
+    break;
+    case "3":
+        showAllContacts(contacts);
+    break;
+    case "4":
+        let nam = window.prompt("Digite su Nombre: ");
+        let phone = window.prompt("Digite su Numero de Telefono: ");
+        let email = window.prompt("Digite su Correo Electronico: ");
+        addNewContacts(contacts,nam, phone,email);
+    break;
+    case "5":
+        let orde = window.prompt("Digite como quiere ordenar: \n1. Nombre \n2. Telefono \n3. Correo Electronico ");
+        sortContacts(contacts,orde);
+    break;
+    case "6":
+        alert("Chausito ^^");
+    break;
+    default:
+        alert("No existe esa opcion")
+}
+} while(op != 6);
+
+function showContact(lisCont, numInd) {
+if (lisCont instanceof Array && lisCont[numInd]) {
+    console.log(`${lisCont[numInd].name} / ${lisCont[numInd].phone} / ${lisCont[numInd].email}`);
+}
+}
+
+function showAllContacts(lisCont) {
+if (lisCont instanceof Array) {
+    for (let i = 0; i < lisCont.length; i++) {
+        console.log(`${lisCont[i].name} / ${lisCont[i].phone} / ${lisCont[i].email}`);        
+    }
+}
+}
+
+function addNewContacts(lisCont, nom, cell, corrElec ) {
+if (contacts instanceof Array && nom && cell && corrElec) {
+    lisCont.push({
+        name: nom,
+        phone: cell,
+        email: corrElec
+    });
+    alert("Se agrego con exito!");
+}
+}
+
+function sortContacts(contacts, orde) {
+if (contacts instanceof Array) {
+    switch (orde) {
+        case "1":
+            contacts.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+        case "2":
+            contacts.sort((a, b) => a.phone.localeCompare(b.phone));
+        break;
+        case "3":
+            contacts.sort((a, b) => a.email.localeCompare(b.email));
+        break;
+        default:
+            console.log("Opción no válida");
+        return;
+    }
+    console.log("Lista ordenada:");
+    for (const contact of contacts) {
+        console.log(`${contact.name} / ${contact.phone} / ${contact.email}`);
+    }
+}
+}
+                </pre>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+<div class="pie">
+    <h2>© 2023 Página de Laboratorios</h2>
+</div>
