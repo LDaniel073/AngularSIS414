@@ -99,3 +99,82 @@ body{
 .pie h2{
     padding-top: 10px;
 }
+
+.container-form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.input {
+    width: 45%;
+}
+
+form {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.nom {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.enviar, .edit {
+    width: 65px;
+    padding: 7px;
+    background-color: #176B87;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.enviar:hover, .edit:hover {
+    background-color: #04364A;
+    color: #DAFFFB;
+    font-weight: bold;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #082936;
+    color: white;
+}
+
+tr{
+    background-color: #DAFFFB;
+}
+
+.elim {
+    width: 65px;
+    padding: 7px;
+    background-color: #176B87;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+.elim:hover {
+    background-color: #04364A;
+    color: #DAFFFB;
+    font-weight: bold;
+}
