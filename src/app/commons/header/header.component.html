@@ -1,9 +1,9 @@
 <ul>
-    <li><a routerLink="/">Inicio</a></li>
+    <li><a routerLink="/home2">Inicio</a></li>
     <li><a routerLink="/labs">Labs</a></li>
     <li><a routerLink="/otros">Otros</a></li>
     <li>
-        <a href="/" (click)="Salir()" *ngIf="user!=null">Salir</a>
+        <a href="/home" (click)="Salir()" *ngIf="user!=null">Salir</a>
     </li>
     <li style="float:right">
         <a class="active" routerLink="/login" *ngIf="user == null">Login</a>

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegisterComponent } from './register.component';
+import { Home2Component } from './home2.component';
 
-describe('RegisterComponent', () => {
-  let component: RegisterComponent;
-  let fixture: ComponentFixture<RegisterComponent>;
+describe('Home2Component', () => {
+  let component: Home2Component;
+  let fixture: ComponentFixture<Home2Component>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [RegisterComponent]
+      declarations: [Home2Component]
     });
-    fixture = TestBed.createComponent(RegisterComponent);
+    fixture = TestBed.createComponent(Home2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -18,4 +18,4 @@ describe('RegisterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-}); 
+});
